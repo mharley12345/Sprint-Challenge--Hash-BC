@@ -30,6 +30,6 @@ def reconstruct_trip(tickets, length):
     # Skip one in length as we already added first destination
     # Use previous desintation as lookup for next following destination
     for index in range(1, length):
-        route[index] = hash_table_retrieve(hashtable, route[index-2])
+        route[index] = hash_table_retrieve(hashtable, route[-1])
 
     return route
